@@ -1,9 +1,9 @@
 import React from "react";
 
-function Login() {
+function Register() {
   return (
-    <div className="login w-50 border rounded mx-auto mt-5">
-    <div className="display-5 text-center">Login</div>
+    <div className="register w-50 border rounded mx-auto mt-5">
+    <div className="display-5 text-center">Register</div>
       <form className="container p-4">
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
@@ -29,6 +29,16 @@ function Login() {
             id="exampleInputPassword1"
           />
         </div>
+        <div className="mb-3">
+          <label for="exampleInputPassword2" className="form-label">
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword2"
+          />
+        </div>
         {/* <div className="mb-3 form-check">
           <input
             type="checkbox"
@@ -41,7 +51,7 @@ function Login() {
         </div> */}
         <div className="mb-3">
 
-        <button type="submit" className="btn btn-primary btn-lg">  Submit</button>
+        <button type="submit" className="btn btn-primary btn-lg">Register</button>
         </div>
         
       </form>
@@ -49,4 +59,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

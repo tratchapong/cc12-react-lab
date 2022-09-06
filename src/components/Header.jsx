@@ -21,7 +21,7 @@ function Header() {
                 <Link className="nav-link" to="/login">Login</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="#">Products</Link>
+                <Link className="nav-link" to="/products">Products</Link>
             </li>
             </ul>
             <form className="d-flex" role="search">

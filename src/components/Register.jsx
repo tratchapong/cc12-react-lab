@@ -6,7 +6,7 @@ function Register() {
     <div className="display-5 text-center">Register</div>
       <form className="container p-4">
         <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
           </label>
           <input
@@ -20,7 +20,7 @@ function Register() {
           </div> */}
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Password
           </label>
           <input
@@ -30,7 +30,7 @@ function Register() {
           />
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword2" className="form-label">
+          <label htmlFor="exampleInputPassword2" className="form-label">
             Confirm Password
           </label>
           <input
@@ -39,16 +39,6 @@ function Register() {
             id="exampleInputPassword2"
           />
         </div>
-        {/* <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div> */}
         <div className="mb-3">
 
         <button type="submit" className="btn btn-primary btn-lg">Register</button>

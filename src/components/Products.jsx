@@ -4,7 +4,7 @@ import React from "react";
 
 function Products() {
   return (
-    <section style={{ backgroundColor: "#eee;" }}>
+    <section style={{ backgroundColor: "#eee" }}>
       <div className="container py-5">
         <div className="row justify-content-center mb-3">
           <div className="col-md-12 col-xl-10">

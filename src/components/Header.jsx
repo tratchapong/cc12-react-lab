@@ -1,7 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
+    const location = useLocation()
+    // console.log(location)
+    let allPaths = ['/', '/products', '/register', '/login']
+    let  i = allPaths.findIndex( x=> location.pathname === x)
+    // console.log(i)
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary">
         <div className="container-fluid">
@@ -11,17 +16,17 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            <li className="nav-item">   
+                <Link className={`nav-link ${i===0 && 'active'}`} aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/products">Products</Link>
+                <Link className={`nav-link ${i===1 && 'active'}`}  to="/products">Products</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/register">Register</Link>
+                <Link className={`nav-link ${i===2 && 'active'}`}  to="/register">Register</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
+                <Link className={`nav-link ${i===3 && 'active'}`}  to="/login">Login</Link>
             </li>
             </ul>
             <form className="d-flex" role="search">

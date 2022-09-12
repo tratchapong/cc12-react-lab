@@ -28,7 +28,7 @@ function Hero() {
           <img
             src="https://picsum.photos/id/10/700/500"
             className="img-fluid border rounded-3 shadow-lg mb-4"
-            alt="Example image"
+            alt="Example Hero"
             width="700"
             height="500"
             loading="lazy"

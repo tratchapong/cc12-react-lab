@@ -1,7 +1,5 @@
 function Product(props) {
   const {id, title, price, description, category, image, rating} = props.item
-
-  console.log(props)
   return (
     <div className="row justify-content-center mb-3" >
     <div className="col-md-12 col-xl-10">

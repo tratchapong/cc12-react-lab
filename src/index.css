@@ -12,3 +12,10 @@ main {
 .login, .register {
     min-width: 450px;
 }
+
+@media (max-width: 768px) {
+    .border-sm-start-none { 
+        border-style : none !important  ;
+    }
+
+}

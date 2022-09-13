@@ -5,8 +5,8 @@ import Hero from '../components/Hero'
 function Home() {
   return (
     <div>
-      <Carousel />
       <Hero />
+      <Carousel />
     </div>
   )
 }

@@ -3,15 +3,16 @@ function Product(props) {
   return (
     <div className="row justify-content-center mb-3" >
     <div className="col-md-12 col-xl-10">
-      <div className="card shadow-0 border rounded-3" style={{height: '250px'}}>
+      {/* <div className="card shadow-0 border rounded-3 product-card" style={{height: '250px'}}> */}
+      <div className="card shadow-0 border rounded-3 product-card" >
         <div className="card-body">
           <div className="row">
             <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-              <div className="" style={{height:'90%', overflow: 'hidden'}}>
+              <div className="product-frame">
                 <img
                   src={image}
                   className="img-fluid"
-                  style={{ objectFit: 'contain', height: '250px'}}
+                  // style={{ objectFit: 'contain', height: '250px'}}
                 />
               </div>
             </div>
@@ -27,17 +28,13 @@ function Product(props) {
                 </div>
                 <span>{rating.count}</span>
               </div>
-              {/* <div className="mt-1 mb-0 text-muted small">
-                <span>100% cotton</span>
+              <div className="mt-1 mb-0 text-muted small">
+                <span>Category </span>
                 <span className="text-primary"> • </span>
-                <span>Light weight</span>
-                <span className="text-primary"> • </span>
-                <span>
-                  Best finish
-                  <br />
-                </span>
+                <span> {category} </span> 
+
               </div>
-              <div className="mb-2 text-muted small">
+              {/* <div className="mb-2 text-muted small">
                 <span>Unique design</span>
                 <span className="text-primary"> • </span>
                 <span>For men</span>

@@ -7,8 +7,9 @@ function FilterBar(props) {
   console.log('FilterBar run..')
 
   const hdlClick = e => {
-    console.log(e.target.value)
-    setFilter(`category=${e.target.value}`)
+    // console.log(e.target.value)
+    e.target.value && setFilter(`category=${e.target.value}`)
+    !e.target.value && setFilter('')
   }
   
   return (

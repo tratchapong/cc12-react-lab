@@ -6,7 +6,8 @@ import { useLocation } from 'react-router-dom'
 import FilterBar from './FilterBar';
 import Product from "./Product";
 
-function Products() {
+function Products(props) {
+  const {searchText} = props
   const location = useLocation()
   const [data, setData] = useState([])
   const [filter, setFilter] = useState('')
@@ -17,10 +18,10 @@ function Products() {
   // },[location.search])
 
   useEffect( ()=>{
-    axios.get('http://localhost:8080/products?' + filter).then(res => {
+    axios.get('http://localhost:8080/products?' + filter + searchText).then(res => {
       setData(res.data)
     })
-  },[filter])
+  },[filter, searchText])
 
   return (
     <section style={{ backgroundColor: "#eee" }}>

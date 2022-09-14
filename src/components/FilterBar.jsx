@@ -1,10 +1,6 @@
 
-
-
 function FilterBar(props) {
-  // const allCategories = ['electronics', {}]
   const {setFilter} = props
-  console.log('FilterBar run..')
 
   const hdlClick = e => {
     // console.log(e.target.value)

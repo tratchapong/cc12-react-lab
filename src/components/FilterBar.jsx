@@ -1,32 +1,26 @@
-import {useEffect} from "react";
-import {Link, useLocation} from "react-router-dom"
+
+
 
 function FilterBar(props) {
+  // const allCategories = ['electronics', {}]
   const {setFilter} = props
-  const location = useLocation()
+  console.log('FilterBar run..')
 
-  useEffect(() => {
-      console.log(location.search)
-      setFilter(location.search)
-  }, [location.search])
+  const hdlClick = e => {
+    console.log(e.target.value)
+    setFilter(`category=${e.target.value}`)
+  }
   
   return (
-    <div className="btn-group my-3">
-      {/* <div className="display-6">{location.search}</div> */}
-      <Link to={`/products`} className="btn btn-outline-info active" aria-current="page">
-        ALL
-      </Link>
-      <Link to={`/products?category=electronics`} className="btn btn-outline-info" aria-current="page">
-        Electronics
-      </Link>
-      <Link to={`/products?category=men's clothing`} className="btn btn-outline-info">
-        Men's clothing
-      </Link>
-      <Link to={`/products?category=jewelery`} className="btn btn-outline-info">
-        Jewelry
-      </Link>
+    <div className="btn-group mt-2" role="group" aria-label="Basic outlined example">
+      <button type="button" onClick={hdlClick} className="btn btn-outline-primary" value='' >All</button>
+      <button type="button" onClick={hdlClick} className="btn btn-outline-primary" value={`electronics`} >Electronics</button>
+      <button type="button" onClick={hdlClick} className="btn btn-outline-primary" value={`men's clothing`} >Men's clothing</button>
+      <button type="button" onClick={hdlClick} className="btn btn-outline-primary" value={`women's clothing`} >Women's Clothing</button>
+      <button type="button" onClick={hdlClick} className="btn btn-outline-primary" value={`jewelery`} >Jewelry</button>
+
     </div>
   );
-}
+} 
 
 export default FilterBar;

@@ -3,7 +3,6 @@ function Product(props) {
   return (
     <div className="row justify-content-center mb-3" >
     <div className="col-md-12 col-xl-10">
-      {/* <div className="card shadow-0 border rounded-3 product-card" style={{height: '250px'}}> */}
       <div className="card shadow-0 border rounded-3 product-card" >
         <div className="card-body">
           <div className="row">

@@ -14,7 +14,7 @@ function ProductModal(props) {
             <div className="modal-body">
               <p>{el.description}</p>
               <img src={el.image} alt="product item" style={{ height:'200px', display:'block' }} />
-              <button type="button" class="btn btn-outline-primary my-3">${el.price.toFixed(2)}</button>
+              <button type="button" class="btn btn-outline-primary my-3">${(el.price)?.toFixed(2)}</button>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

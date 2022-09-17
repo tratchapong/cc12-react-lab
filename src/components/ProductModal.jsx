@@ -4,7 +4,7 @@ function ProductModal(props) {
   const { el } = props
   return (
     <div>
-      <div className="modal fade" id={`Pid_${el.id}`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="ProductModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -13,11 +13,11 @@ function ProductModal(props) {
             </div>
             <div className="modal-body">
               <p>{el.description}</p>
-              <img src={el.image} alt="product item" style={{ height:'200px' }} />
+              <img src={el.image} alt="product item" style={{ height:'200px', display:'block' }} />
+              <button type="button" class="btn btn-outline-primary my-3">${el.price.toFixed(2)}</button>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>

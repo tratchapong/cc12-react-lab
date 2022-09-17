@@ -1,18 +1,16 @@
-import Hero from "./components/Hero";
-import MyModal from "./components/MyModal";
-
+import PContainer from "./components/PContainer";
+import * as data from './products.json'
 
 function App() {
-
+  const {products} = data
   return (
     <div className="App container">
-      <div className="btn-group start-50 translate-middle" role="group" style={{top: '2rem'}}>
-        <button type="button" className="btn btn-danger">Left</button>
-        <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal1">Middle</button>
-        <button type="button" className="btn btn-success">Right</button>
-      </div>
-      <MyModal />
-      <Hero />
+      <div className="display-3 my-3 border rounded bg-info bg-gradient">Products list</div>
+ 
+      { products.map( el => (
+          <PContainer key={el.id} el={el}/>
+          ))   
+        }
     </div>
   );
 }

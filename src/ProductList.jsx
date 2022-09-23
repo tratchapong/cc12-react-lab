@@ -1,3 +1,6 @@
+import {useState} from 'react'
+import TwModal from './TwModal'
+
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -51,6 +54,13 @@ const products = [
 ]
 
 export default function ProductList() {
+  const [selItem, setSelItem] = useState({})
+  const [open, setOpen] = useState(false)
+  const hdlClick = (e, product) => {
+    e.preventDefault()
+    setSelItem(product)
+    setOpen(true)
+  }
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -58,7 +68,7 @@ export default function ProductList() {
 
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+            <a key={product.id} href={product.href} className="group" role="button" onClick={e=>hdlClick(e,product)}>
               <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
                 <img
                   src={product.imageSrc}
@@ -72,6 +82,10 @@ export default function ProductList() {
           ))}
         </div>
       </div>
+      <TwModal  open={open} doClose={()=>setOpen(false)} >
+        <h2>{selItem.price}</h2>
+        <img className='block' src={selItem.imageSrc} alt={selItem.imageAlt} />
+       </TwModal>
     </div>
   )
 }

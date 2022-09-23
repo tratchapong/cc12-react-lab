@@ -24,7 +24,9 @@ function App() {
       {/* <LoginForm />
 
       <MyModal open={open} setOpen={setOpen} /> */}
-      <TwModal open={open} setOpen={setOpen} />
+      <TwModal open={open} doClose={()=>setOpen(false)}>
+        <LoginForm />
+      </TwModal>
     </div>
   );
 }

@@ -20,11 +20,11 @@ function App() {
       >
         Open Modal
       </button>
-      {/* <LoginForm />
       <ProductList />
+      {/* <LoginForm />
 
       <MyModal open={open} setOpen={setOpen} /> */}
-      <TwModal />
+      <TwModal open={open} setOpen={setOpen} />
     </div>
   );
 }

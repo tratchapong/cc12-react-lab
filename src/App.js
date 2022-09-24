@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Accordian from "./Accordian";
 import ChitChat from "./ChitChat";
+import Jacket from "./Jacket";
 import LoginForm from "./LoginForm";
 import MyModal from "./MyModal";
 import Navbar from "./Navbar";
 import ProductList from "./ProductList";
+import ProductList2 from "./ProductList2";
 import TwModal from "./TwModal";
 
 function App() {
@@ -20,13 +22,15 @@ function App() {
       >
         Open Modal
       </button>
-      <ProductList />
+      {/* <ProductList /> */}
+      <ProductList2 />
       {/* <LoginForm />
-
       <MyModal open={open} setOpen={setOpen} /> */}
       <TwModal open={open} doClose={()=>setOpen(false)}>
         <LoginForm />
       </TwModal>
+
+      <Jacket />
     </div>
   );
 }

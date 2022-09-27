@@ -17,7 +17,19 @@ function App() {
       <Accordian /> */}
       <Navbar />
       <button
-        className="my-3 mx-auto block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        className="btn-primary"
+        onClick={() => setOpen(!open)}
+      >
+        Open Modal
+      </button>
+      <button
+        className="btn-secondary"
+        onClick={() => setOpen(!open)}
+      >
+        Open Modal
+      </button>
+      <button
+        className="btn-openModal"
         onClick={() => setOpen(!open)}
       >
         Open Modal
